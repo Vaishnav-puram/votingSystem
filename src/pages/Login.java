@@ -60,10 +60,12 @@ public class Login extends HttpServlet {
 				}else {
 					if(!u.isVotingStatus()) {
 						response.sendRedirect("userHome");
+					}else {
+						response.sendRedirect("userHome2");
 					}
 				}
 			}else {
-				pw.print("Invalid credentials ! <a href=\"signup.html\">Signin again ?</a> ");
+				pw.print("Invalid credentials ! <a href=\"login.html\">Signin again ?</a> ");
 			}
 		}catch (Exception e) {
 			// TODO: handle exception
